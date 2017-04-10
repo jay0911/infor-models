@@ -1,12 +1,15 @@
 package com.infor.models;
 
-import javax.persistence.CascadeType;
+import java.util.Set;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -35,12 +38,23 @@ public class InforUser {
 	
 	@Column(name = "position")
 	private String position;
-	
+
 	@Column(name = "username")
 	private String username;
 	
 	@Column(name = "password")
 	private String password;
+	
+    @OneToMany(mappedBy = "inforUser",fetch = FetchType.EAGER)
+	private Set<InforCar> inforCar;
+    
+	public Set<InforCar> getInforCar() {
+		return inforCar;
+	}
+
+	public void setInforCar(Set<InforCar> inforCar) {
+		this.inforCar = inforCar;
+	}
 	
 	public int getUserid() {
 		return userid;
