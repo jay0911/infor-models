@@ -2,7 +2,7 @@ package com.infor.models;
 
 import java.util.Set;
 
-
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -47,6 +48,17 @@ public class InforUser {
 	
     @OneToMany(mappedBy = "inforUser",fetch = FetchType.EAGER)
 	private Set<InforCar> inforCar;
+
+    @OneToOne(mappedBy = "inforUser")
+	private InforParking inforParking;
+	
+    public InforParking getInforParking() {
+		return inforParking;
+	}
+
+	public void setInforParking(InforParking inforParking) {
+		this.inforParking = inforParking;
+	}
     
 	public Set<InforCar> getInforCar() {
 		return inforCar;

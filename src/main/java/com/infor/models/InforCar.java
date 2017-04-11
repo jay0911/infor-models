@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,12 +18,13 @@ public class InforCar {
 	@Column(name = "carid")
 	private int carid;
 	
-	@Column(name = "userid")
-	private int userid;
+	@ManyToOne
+	@JoinColumn(name = "userid")
+	private InforUser inforUser;
 	
 	@Column(name = "carplatenumber")
 	private String carplatenumber;
-	
+
 	@Column(name = "carbrand")
 	private String carbrand;
 	
@@ -34,13 +37,12 @@ public class InforCar {
 	public void setCarid(int carid) {
 		this.carid = carid;
 	}
-
-	public int getUserid() {
-		return userid;
+	
+	public InforUser getInforUser() {
+		return inforUser;
 	}
-
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setInforUser(InforUser inforUser) {
+		this.inforUser = inforUser;
 	}
 
 	public String getCarplatenumber() {
