@@ -2,7 +2,6 @@ package com.infor.models;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -46,11 +45,22 @@ public class InforUser {
 	@Column(name = "password")
 	private String password;
 	
-    @OneToMany(mappedBy = "inforUser",fetch = FetchType.EAGER)
+	@Column(name = "gender")
+	private String gender;
+
+	@OneToMany(mappedBy = "inforUser",fetch = FetchType.EAGER)
 	private Set<InforCar> inforCar;
 
     @OneToOne(mappedBy = "inforUser")
 	private InforParking inforParking;
+    
+    public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	
     public InforParking getInforParking() {
 		return inforParking;
