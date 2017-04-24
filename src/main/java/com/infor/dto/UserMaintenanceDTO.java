@@ -2,6 +2,7 @@ package com.infor.dto;
 
 import java.util.List;
 
+import com.infor.models.InforCar;
 import com.infor.models.InforRoles;
 import com.infor.models.InforUser;
 
@@ -11,7 +12,9 @@ public class UserMaintenanceDTO {
 	private List<InforRoles> inforRoles;
 	private List<InforUser> inforUsers;
 	private InforUser inforUser;
+	private InforCar inforCar;
 
+	private int userid;
 	private String firstname;
 	private String lastname;
 	private String contactnumber;
@@ -21,6 +24,10 @@ public class UserMaintenanceDTO {
 	private String position;
 	private String username;
 	private String password;
+	
+	private String carplatenumber;
+	private String carbrand;
+	private String carcolor;
 	
 	public List<InforUser> getInforUsers() {
 		return inforUsers;
@@ -116,5 +123,46 @@ public class UserMaintenanceDTO {
 
 	public void setInforUser(InforUser inforUser) {
 		this.inforUser = inforUser;
-	} 
+	}
+
+
+	public InforCar getInforCar() {
+		return inforCar;
+	}
+
+	public void setInforCar(InforCar inforCar) {
+		this.inforCar = inforCar;
+	}
+
+	public String getCarplatenumber() {
+		return carplatenumber;
+	}
+
+	public void setCarplatenumber(String carplatenumber) {
+		this.carplatenumber = carplatenumber;
+	}
+
+	public String getCarbrand() {
+		return carbrand;
+	}
+
+	public void setCarbrand(String carbrand) {
+		this.carbrand = carbrand;
+	}
+
+	public String getCarcolor() {
+		return carcolor;
+	}
+
+	public void setCarcolor(String carcolor) {
+		this.carcolor = carcolor;
+	}
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
 }
