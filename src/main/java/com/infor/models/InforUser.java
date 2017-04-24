@@ -47,12 +47,6 @@ public class InforUser {
 	
 	@Column(name = "gender")
 	private String gender;
-
-	@OneToMany(mappedBy = "inforUser",fetch = FetchType.EAGER)
-	private Set<InforCar> inforCar;
-
-    @OneToOne(mappedBy = "inforUser")
-	private InforParking inforParking;
     
     public String getGender() {
 		return gender;
@@ -60,22 +54,6 @@ public class InforUser {
 
 	public void setGender(String gender) {
 		this.gender = gender;
-	}
-	
-    public InforParking getInforParking() {
-		return inforParking;
-	}
-
-	public void setInforParking(InforParking inforParking) {
-		this.inforParking = inforParking;
-	}
-    
-	public Set<InforCar> getInforCar() {
-		return inforCar;
-	}
-
-	public void setInforCar(Set<InforCar> inforCar) {
-		this.inforCar = inforCar;
 	}
 	
 	public int getUserid() {

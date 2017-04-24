@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,10 +19,16 @@ public class InforParking {
 	@Column(name = "parkingid")
 	private String parkingid;
 	
-    @OneToOne
-    @JoinColumn(name = "userid")
-	private InforUser inforUser;
+    @Column(name = "userid")
+	private int userid;
 	
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
 	@Column(name = "isparkingtandem")
 	private String isparkingtandem;
 
@@ -41,12 +45,7 @@ public class InforParking {
 	public String getParkingid() {
 		return parkingid;
 	}
-	public InforUser getInforUser() {
-		return inforUser;
-	}
-	public void setInforUser(InforUser inforUser) {
-		this.inforUser = inforUser;
-	}
+
 	public void setParkingid(String parkingid) {
 		this.parkingid = parkingid;
 	}

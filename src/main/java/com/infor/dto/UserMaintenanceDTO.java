@@ -13,6 +13,7 @@ public class UserMaintenanceDTO {
 	private List<InforUser> inforUsers;
 	private InforUser inforUser;
 	private InforCar inforCar;
+	private List<InforCar> inforCars;
 
 	private int userid;
 	private String firstname;
@@ -164,5 +165,13 @@ public class UserMaintenanceDTO {
 
 	public void setUserid(int userid) {
 		this.userid = userid;
+	}
+
+	public List<InforCar> getInforCars() {
+		return inforCars;
+	}
+
+	public void setInforCars(List<InforCar> inforCars) {
+		this.inforCars = inforCars;
 	}
 }
