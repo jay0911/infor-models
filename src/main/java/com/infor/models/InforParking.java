@@ -31,9 +31,6 @@ public class InforParking {
 
 	@Column(name = "isparkingtandem")
 	private String isparkingtandem;
-
-	@Column(name = "tandemposition")
-	private String tandemposition;
 	
 	public int getId() {
 		return id;
@@ -56,14 +53,6 @@ public class InforParking {
 
 	public void setIsparkingtandem(String isparkingtandem) {
 		this.isparkingtandem = isparkingtandem;
-	}
-
-	public String getTandemposition() {
-		return tandemposition;
-	}
-
-	public void setTandemposition(String tandemposition) {
-		this.tandemposition = tandemposition;
 	}
 
 }

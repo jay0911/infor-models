@@ -3,6 +3,7 @@ package com.infor.dto;
 import java.util.List;
 
 import com.infor.models.InforCar;
+import com.infor.models.InforParking;
 import com.infor.models.InforRoles;
 import com.infor.models.InforUser;
 
@@ -14,6 +15,7 @@ public class UserMaintenanceDTO {
 	private InforUser inforUser;
 	private InforCar inforCar;
 	private List<InforCar> inforCars;
+	private List<InforParking> inforParkings;
 
 	private int userid;
 	private String firstname;
@@ -29,6 +31,9 @@ public class UserMaintenanceDTO {
 	private String carplatenumber;
 	private String carbrand;
 	private String carcolor;
+	
+	private String isparkingtandem;
+	private String parkingid;
 	
 	public List<InforUser> getInforUsers() {
 		return inforUsers;
@@ -173,5 +178,29 @@ public class UserMaintenanceDTO {
 
 	public void setInforCars(List<InforCar> inforCars) {
 		this.inforCars = inforCars;
+	}
+
+	public List<InforParking> getInforParkings() {
+		return inforParkings;
+	}
+
+	public void setInforParkings(List<InforParking> inforParkings) {
+		this.inforParkings = inforParkings;
+	}
+
+	public String getIsparkingtandem() {
+		return isparkingtandem;
+	}
+
+	public void setIsparkingtandem(String isparkingtandem) {
+		this.isparkingtandem = isparkingtandem;
+	}
+
+	public String getParkingid() {
+		return parkingid;
+	}
+
+	public void setParkingid(String parkingid) {
+		this.parkingid = parkingid;
 	}
 }
