@@ -7,8 +7,8 @@ import com.infor.models.InforParking;
 import com.infor.models.InforRoles;
 import com.infor.models.InforUser;
 
-public class UserMaintenanceDTO {
-	public UserMaintenanceDTO(){}
+public class MaintenanceDTO {
+	public MaintenanceDTO(){}
 	
 	private List<InforRoles> inforRoles;
 	private List<InforUser> inforUsers;
