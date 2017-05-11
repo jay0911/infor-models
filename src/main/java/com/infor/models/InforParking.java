@@ -21,14 +21,14 @@ public class InforParking {
 	
     @Column(name = "userid")
 	private int userid;
-	
+   
 	public int getUserid() {
 		return userid;
 	}
 	public void setUserid(int userid) {
 		this.userid = userid;
 	}
-
+	
 	@Column(name = "isparkingtandem")
 	private String isparkingtandem;
 	
