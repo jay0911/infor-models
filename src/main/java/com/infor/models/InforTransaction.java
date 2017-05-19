@@ -30,8 +30,6 @@ public class InforTransaction {
 	@Column(name = "timeout")
 	private String timeout;
 	
-	@Column(name = "istransactiondone")
-	private String istransactiondone;
 	
 	public int getTransactionid() {
 		return transactionid;
@@ -79,14 +77,6 @@ public class InforTransaction {
 
 	public void setTimeout(String timeout) {
 		this.timeout = timeout;
-	}
-
-	public String getIstransactiondone() {
-		return istransactiondone;
-	}
-
-	public void setIstransactiondone(String istransactiondone) {
-		this.istransactiondone = istransactiondone;
 	}
 
 }
