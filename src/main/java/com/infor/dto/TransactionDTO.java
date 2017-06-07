@@ -5,6 +5,7 @@ import com.infor.models.InforParking;
 
 public class TransactionDTO {
 	private InforParking inforParking;
+	private InforParking tandemParkingDetails;
 	private AjaxResponseBody ajaxResponseBody;
 	public InforParking getInforParking() {
 		return inforParking;
@@ -17,5 +18,11 @@ public class TransactionDTO {
 	}
 	public void setAjaxResponseBody(AjaxResponseBody ajaxResponseBody) {
 		this.ajaxResponseBody = ajaxResponseBody;
+	}
+	public InforParking getTandemParkingDetails() {
+		return tandemParkingDetails;
+	}
+	public void setTandemParkingDetails(InforParking tandemParkingDetails) {
+		this.tandemParkingDetails = tandemParkingDetails;
 	}
 }
