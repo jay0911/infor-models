@@ -2,10 +2,11 @@ package com.infor.dto;
 
 import com.infor.models.AjaxResponseBody;
 import com.infor.models.InforParking;
+import com.infor.models.InforUser;
 
 public class TransactionDTO {
 	private InforParking inforParking;
-	private InforParking tandemParkingDetails;
+	private InforUser tandemParkingDetails;
 	private AjaxResponseBody ajaxResponseBody;
 	public InforParking getInforParking() {
 		return inforParking;
@@ -19,10 +20,10 @@ public class TransactionDTO {
 	public void setAjaxResponseBody(AjaxResponseBody ajaxResponseBody) {
 		this.ajaxResponseBody = ajaxResponseBody;
 	}
-	public InforParking getTandemParkingDetails() {
+	public InforUser getTandemParkingDetails() {
 		return tandemParkingDetails;
 	}
-	public void setTandemParkingDetails(InforParking tandemParkingDetails) {
+	public void setTandemParkingDetails(InforUser tandemParkingDetails) {
 		this.tandemParkingDetails = tandemParkingDetails;
 	}
 }
